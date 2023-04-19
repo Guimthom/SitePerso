@@ -9,7 +9,7 @@ header{
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    margin-bottom: 80px;
+    margin-bottom: 10px;
 }
 
 header a{
@@ -30,17 +30,18 @@ body{
 }
 
 h1{
-    color: grey;
+    color: rgb(65, 59, 71);
     font-family: 'Montserrat', sans-serif;
-    text-align: center;
     font-size: 2.5em;
+    font-weight: 600;
+    
 }
 
 h2{
-    color: grey;
+    color: rgb(92, 83, 100);
     font-family: 'Montserrat', sans-serif;
-    text-align: center;
-    font-size: 2.5em;
+    font-size: 2em;
+    font-weight: 400;
 }
 
 h3{
@@ -52,11 +53,14 @@ h3{
 }
 
 em{
-    color: rgb(0, 183, 255);
+    color: coral;
 }
 
 a{
     text-decoration: none;
+    color: coral;
+    font-weight: 600;
+
 }
 
 #portfolio{
@@ -75,6 +79,108 @@ a{
     max-width: 500px;
 }
 
+#portfolio img{
+
+}
+
+
+.container{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 300px 300px;
+    gap: 10px;
+}
+
+
+
+.box img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.deux{
+    grid-column: 2;
+    grid-row: 1 / 3;
+}
+
+.cinq{
+    grid-column : 3;
+    grid-row: 2 /4;
+}
+
+section{
+    padding: 80px;
+}
+
+.container-image{
+    position: relative;
+}
+
+h4{
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color:rgba(255, 127, 80, 0.801);
+    font-size: 1.3em;
+    color: white;
+    display: none;
+}
+
+.container-image:hover h4{
+    display: flex;
+}
+
+/* --- STYLE DU BODY (ABOUT.HTML) --- */
+
+#presentation{
+    display: flex;
+    justify-content: center;
+    padding: 80px;
+    width: 60%;
+    margin: auto;
+}
+
+.presentation-text{
+    padding-left: 40px;
+}
+
+.presentation-text p{
+    padding: 40px 0px 40px;
+    line-height: 2em;
+    color: rgb(99, 99, 99);
+}
+
+#presentation img{
+    max-width: 500px;
+}
+
+.presentation-icons{
+    padding-top: 40px;
+}
+
+.presentation-icons img{
+    margin: 0 5px;
+    opacity: 0.5;
+}
+
+.presentation-icons img:hover{
+    opacity: 0.8;
+}
+
+.cta{
+    background-color: coral;
+    color: white;
+    padding: 20px;
+    border-radius: 50px;
+    display: inline-block;
+}
+
 /* --- STYLE DU FOOTER --- */
 
 footer{
@@ -82,7 +188,7 @@ footer{
     flex-direction: row;
     align-items: center;
     justify-content: center;
-    padding: 20px 20px 80px 20px;
+    padding: 20px 20px 40px 20px;
 }
  
 
