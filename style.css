@@ -1,3 +1,5 @@
+/* --- REINITIALISATION GLOBALE --- */
+
 *{
     margin: 0;
 }
@@ -24,9 +26,14 @@ color: coral;
 
 
 /* --- STYLE DU BODY --- */
+
 body{
     background-color: #f0f0f0;
     font-family: 'Manrope', sans-serif;
+}
+
+section{
+    padding: 80px;
 }
 
 h1{
@@ -50,6 +57,21 @@ h3{
     font-family: 'Montserrat', sans-serif;
     text-align: center;
     margin-bottom: 80px;
+}
+
+h4{
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color:rgba(255, 127, 80, 0.801);
+    font-size: 1.3em;
+    color: white;
+    display: none;
 }
 
 em{
@@ -92,7 +114,6 @@ a{
 }
 
 
-
 .box img{
     width: 100%;
     height: 100%;
@@ -109,34 +130,23 @@ a{
     grid-row: 2 /4;
 }
 
-section{
-    padding: 80px;
-}
-
 .container-image{
     position: relative;
-}
-
-h4{
-    position: absolute;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background-color:rgba(255, 127, 80, 0.801);
-    font-size: 1.3em;
-    color: white;
-    display: none;
 }
 
 .container-image:hover h4{
     display: flex;
 }
 
-/* --- STYLE DU BODY (ABOUT.HTML) --- */
+.cta{
+    background-color: coral;
+    color: white;
+    padding: 20px;
+    border-radius: 50px;
+    display: inline-block;
+}
+
+/* --- (ABOUT.HTML) --- */
 
 #presentation{
     display: flex;
@@ -171,14 +181,6 @@ h4{
 
 .presentation-icons img:hover{
     opacity: 0.8;
-}
-
-.cta{
-    background-color: coral;
-    color: white;
-    padding: 20px;
-    border-radius: 50px;
-    display: inline-block;
 }
 
 table{
@@ -249,12 +251,14 @@ textarea{
     
 }
 
-.cta-center:hover{
+.cta:hover{
    background-color: rgb(80, 185, 255);
    transform: scale(1);
    transition: all .2s ease-in-out;
     
 }
+
+
 
 /* --- STYLE DU FOOTER --- */
 
@@ -282,4 +286,69 @@ footer i:hover{
    transition: all .3s ease-in-out;
 }
 
+/* --- RESPONSIVE DESIGN --- */
 
+@media screen and (max-width: 996px) {
+
+    h3{
+    font-size: 2.5em;
+    }
+
+    section{
+        padding:20px
+    }
+ 
+    #test{
+        display: none;
+    }
+    .container{
+    display: flex;
+    flex-direction: column;
+ }
+    
+    .container-image:hover h4{
+    display: none;
+    }
+
+    .box img{
+        max-height: 700px;
+    }
+
+    #presentation{
+        flex-direction: column;
+        padding: 20px;
+        width: 100%;
+        max-width: 600px;
+    }
+
+    #presentation .cta{
+        width: 180px;
+        text-align: center;
+       
+    }
+
+    #presentation img{
+        margin: 40px auto;
+        max-width: 600px;
+    }
+
+    .presentation-text{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 0;
+    }
+
+    .presentation-text p{
+        text-align: center;
+    }
+
+    .container-nom-email{
+        flex-direction: column;
+    }
+
+    label{
+        margin-top: 10px;
+    }
+
+}
